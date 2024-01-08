@@ -1,0 +1,59 @@
+---
+const opcionesFecha = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+let fechaTexto
+const opcionesHora = { hour: "2-digit", minute: "2-digit", second: "2-digit" };
+setTimeout(() => {
+  const ahora = new Date();
+  fechaTexto = ahora.toLocaleDateString("es-ES");
+  const horaTexto = ahora.toLocaleTimeString("es-ES");
+},1000);
+---
+
+<header class="p-4">
+  <nav class="flex flex-row gap-x-2 items-center my-auto">
+    <section class="flex flex-row">
+      <i
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-menu-2"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+            d="M4 6l16 0"></path><path d="M4 12l16 0"></path><path
+            d="M4 18l16 0"></path></svg
+        >
+      </i>
+      <span class="px-1 text-sm leading-6">Menú</span>
+    </section>
+
+    <section>
+      <div class="text-sm font-bold">Intranet Diputacion de Jaén</div>{fechaTexto}
+    </section>
+
+    <ul>
+      <a href=""></a>
+      <a href=""></a>
+      <a href=""></a>
+      <a href=""></a>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  nav {
+  }
+  header {
+    //border: 1px solid red;
+  }
+</style>
